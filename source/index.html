@@ -8,23 +8,41 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <nav class="main-nav">
+    <header class="main-nav">
       <div class="container main-nav__container">
         <a class="main-nav__logo">
           <img src="img/logo.svg" alt="Логотип компании Slick">
         </a>
+        <nav class="main-nav__menu main-nav__menu--showed">
+          <button class="main-nav__close">
+            <img src="img/zakrytie.svg" alt="">
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a>Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Магазин</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
 
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a>Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">Магазин</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
+          <div class="main-nav__contacts">
+            <p>Следи за нами
+              в социальных сетях:</p>
+            <ul class="main-nav__social social">
+              <li class="social__item">
+                <a href="#"><img src="img/TG.svg" alt="Иконка тг"></a>
+              </li>
+              <li class="social__item">
+                <a href="#"><img src="img/VK.svg" alt="Иконка вк"></a>
+              </li>
+
+            </ul>  
+          </div>
+        </nav>
         <div class="main-nav__buttons">
           <button class="main-nav__button main-nav__button-find">
             <img src="img/find.svg" alt="Иконка поиска">
@@ -37,6 +55,6 @@
           </button>
         </div>
       </div>
-    </nav>
+    </header>
   </body>
 </html>

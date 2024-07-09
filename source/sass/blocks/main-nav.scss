@@ -15,6 +15,15 @@
     
     }
 
+    &__close {
+        @include clear-button;
+
+        display: none;
+        position: absolute;
+        top: 24px;
+        right: 11px;
+    }
+
     &__container {
         display: flex;
         align-items: center;
@@ -24,10 +33,59 @@
         margin-right: 127.5px;
     }
 
+    &__contacts {
+        display: none;
+        margin-top: auto;
+        padding-bottom: 20px;
+        padding-right: 10px;
+        padding-left: 20px;
+        
+    }
+
+    &__menu {
+        display: none;
+        
+
+        
+        @media (max-width: 767px) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100vh;
+            z-index: 90;
+            background-color: #EBEBEB;
+        
+        }
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+
+        &--showed {
+            display:flex;
+            flex-direction: column;
+
+            .main-nav__contacts {
+                display: block;
+            }
+
+            .main-nav__close {
+                display: block;
+            }
+        }
+    }
+
+
     &__list {
         @include clear-list;
+        margin-top: 76px;
+        
 
-        display: flex;
+
+        @media (min-width:768px) {
+            display: flex;
+        }
     }
 
     &__item {
@@ -36,8 +94,33 @@
         line-height: 25px;
         color: #000000;
 
+        @media (max-width:767px) {
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+
         a {
-            padding: 28px 12.5px;
+            display: block;
+            padding-left: 94px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            
+            @media (max-width: 767px) {
+            background-color:#F6F6F6;
+            border: 1px solid #d9d9d9;
+        }
+
+            @media (min-width: 768px) {
+                padding: 28px 12.5px;
+            }
+        }
+
+        &:first-child a {
+            border-top-color: transparent;
         }
     }
 
@@ -46,17 +129,25 @@
         img {
             width: 20px;
             height: 16px;
+            position: relative;
+            z-index: 100;
         }
     }
 
     &__button-find {
-        margin-left: 122px;
-        margin-right: 44px;
+        margin-left: 412px;
+        margin-right: 29px;
+        margin-top: 23px;
 
         img {
             width: 17px;
             height: 16px;
         }
+    }
+
+    &__social {
+        display: flex;
+        @include clear-list;
     }
 
 
